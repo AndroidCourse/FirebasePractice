@@ -36,7 +36,8 @@
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-light" />
+                android:fontFamily="sans-serif-light"
+                android:src="@drawable/logo2" />
 
             <Button
                 android:id="@+id/btnSearch"

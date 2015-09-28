@@ -19,28 +19,29 @@ public class MainLandingPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_landing_page);
 
-		// Fire Base
-		Firebase.setAndroidContext(this);
-		// Fetching Image from Cloud
-		final ImageView imgLogo = (ImageView) findViewById(R.id.imageView1);
-		Firebase fImageMainLandingPage = new Firebase("https://amber-heat-1015.firebaseio.com/Students/-JzGGvEujf_RwLyeIPSZ/imaze");
-		fImageMainLandingPage.addValueEventListener(new ValueEventListener() {
-
-			@Override
-			public void onDataChange(DataSnapshot arg0) {
-				// TODO Auto-generated method stub
-				String tempImage = (String) arg0.getValue();
-				// Assigning Image to Image view
-			
-				UrlImageViewHelper.setUrlDrawable(imgLogo, tempImage);
-			}
-
-			@Override
-			public void onCancelled(FirebaseError arg0) {
-				// TODO Auto-generated method stub
-
-			}
-		});
+//		// Fire Base
+//		Firebase.setAndroidContext(this);
+//		// Fetching Image from Cloud
+//		final ImageView imgLogo = (ImageView) findViewById(R.id.imageView1);
+//		Firebase fImageMainLandingPage = new Firebase("https://amber-heat-1015.firebaseio.com/Students/-JzGGvEujf_RwLyeIPSZ/imaze");
+//		fImageMainLandingPage.addValueEventListener(new ValueEventListener() 
+//		{
+//
+//			@Override
+//			public void onDataChange(DataSnapshot arg0) {
+//				// TODO Auto-generated method stub
+//				String tempImage = (String) arg0.getValue();
+//				// Assigning Image to Image view
+//			
+//				UrlImageViewHelper.setUrlDrawable(imgLogo, tempImage);
+//			}
+//
+//			@Override
+//			public void onCancelled(FirebaseError arg0) {
+//				// TODO Auto-generated method stub
+//
+//			}
+//		});
 
 	}
 

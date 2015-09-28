@@ -24,7 +24,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainLandingActivityTwo"
+            
+            android:logo="@drawable/logo2"
+            android:name=".SearchPage"
             android:label="@string/title_activity_main_landing_activity_two" >
         </activity>
     </application>

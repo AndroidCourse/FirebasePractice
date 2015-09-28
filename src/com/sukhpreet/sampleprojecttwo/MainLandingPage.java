@@ -6,10 +6,15 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainLandingPage extends Activity {
@@ -42,7 +47,18 @@ public class MainLandingPage extends Activity {
 //
 //			}
 //		});
+		Button btnSearch = (Button) findViewById(R.id.btnSearch);
+		btnSearch.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent activityCourse = new Intent(MainLandingPage.this,
+						SearchPage.class);
+				MainLandingPage.this.startActivity(activityCourse);
+				finish();
+			}
+		});
 	}
 
 	@Override
